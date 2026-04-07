@@ -1,0 +1,115 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+}
+h1, h2 {
+    text-align: center;
+    margin-top: 20px;
+    color: #333;
+}
+#orderForm {
+    max-width: 500px;
+    margin: 30px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+#orderForm label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+#orderForm input,
+#orderForm select,
+#orderForm button {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+#orderForm input:focus,
+#orderForm select:focus {
+    border-color: green;
+    outline: none;
+    box-shadow: 0 0 5px green;
+}
+#orderForm button {
+    background-color: limegreen;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+#orderForm button:hover {
+    background-color: green;
+}
+#orderForm button:active {
+    background-color: darkgreen;
+}
+#ordersTable {
+    width: 90%;
+    margin: 40px auto;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+#ordersTable th, #ordersTable td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid black;
+}
+#ordersTable th {
+    background-color: #007bff;
+    border-radius: 5px;
+}
+#ordersTable td {
+    background-color: #fafafa;
+}
+#ordersTable tr:hover {
+    background-color: #e9f1f4;
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%;
+}
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+#topProductsButton, #topClientsButton, #topEmployeesButton {
+    padding: 5px;
+    background-color: #ffa500;
+    margin-left: 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+}

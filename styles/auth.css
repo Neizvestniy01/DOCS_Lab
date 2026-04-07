@@ -1,0 +1,71 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: lightslategrey;
+    margin: 0;
+    padding: 0;
+}
+.auth-section {
+    max-width: 400px;
+    margin: 5px auto;
+    padding: 25px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+.auth-section h2 {
+    font-size: 26px;
+    margin-bottom: 25px;
+    color: #4a3f35;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+label {
+    font-size: 14px;
+    color: #6e5d52;
+    text-align: left;
+}
+input {
+    font-size: 16px;
+    padding: 10px;
+    border: 1px solid #d3c4b4;
+    border-radius: 6px;
+    outline: none;
+    background-color: #fdfcf9;
+    color: #4a3f35;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+input:focus {
+    border-color: #a57b63;
+    box-shadow: 0 0 5px rgba(165, 123, 99, 0.5);
+}
+button {
+    font-size: 16px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+#registerBtn {
+    background-color: #6e4e37;
+    color: #ffffff;
+}
+#registerBtn:hover {
+    background-color: #573c2a;
+}
+#loginBtn {
+    background-color: #d3c4b4;
+    color: #4a3f35;
+}
+#loginBtn:hover {
+    background-color: #b39e8b;
+}
+#authMessage {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #4a3f35;
+}

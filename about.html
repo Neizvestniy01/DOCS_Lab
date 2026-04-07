@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Brew & Bloom</title>
+    <link rel="stylesheet" href="./styles/about.css" />
+    <link rel="stylesheet" href="./styles/navbar.css" />
+</head>
+<body>
+    <nav class="navbar">
+      <ul class="navbar-list">
+        <li class="navbar-item">
+          <a href="./index.html" class="navbar-link">Головна</a>
+        </li>
+        <li class="navbar-item">
+          <a href="./about.html" class="navbar-link">Замовлення</a>
+        </li>
+        <li class="navbar-item">
+          <a href="./history.html" class="navbar-link">Клієнти</a>
+        </li>
+        <li class="navbar-item">
+          <a href="./employees.html" class="navbar-link">Працівники</a>
+        </li>
+        <li class="navbar-item">
+          <a href="./albumPage.html" class="navbar-link">Постачальники</a>
+        </li>
+        <li class="navbar-item">
+          <a href="./auth.html" class="navbar-link">Вийти</a>
+        </li>
+      </ul>
+    </nav>
+
+    <button id="topProductsButton">Топ-3 замовлюваних товарів</button>
+    <button id="topClientsButton">Топ-3 найбільш активних клієнтів</button>
+    <button id="topEmployeesButton">Активність працівників</button>
+    <div id="topProductsModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeTopProductsModal">&times;</span>
+            <h3>Топ-3 замовлюваних товарів</h3>
+            <ul id="topProductsList"></ul>
+        </div>
+    </div>
+    <div id="topClientsModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeTopClientsModal">&times;</span>
+            <h3>Топ-3 найбільш активних клієнтів</h3>
+            <ul id="topClientsList"></ul>
+        </div>
+    </div>
+    <div id="employeesModal" class="modal">
+    <div class="modal-content">
+        <span class="close" id="closeEmployeesModal">&times;</span>
+        <h3>Працівники та кількість виконаних замовлень</h3>
+        <ul id="employeesList"></ul>
+    </div>
+    </div>
+
+    <h1>Створення замовлення</h1>
+    <form id="orderForm">
+        <label for="idClient">ID клієнта:</label>
+        <input type="number" id="idClient" name="idClient" required>
+        <label for="idEmployee">ID працівника:</label>
+        <input type="number" id="idEmployee" name="idEmployee" required>
+        <label for="idEmployee">ID продукту:</label>
+        <input type="number" id="idProduct" name="idProduct" required>
+        <label for="quantity">Кількість товару:</label>
+        <input type="number" id="quantity" name="quantity" min="1" required>
+        <label for="totalAmount">Загальна сума:</label>
+        <input type="number" id="totalAmount" name="totalAmount" step="0.01" min="0" required>
+        <label for="paymentMethod">Спосіб оплати:</label>
+        <select id="paymentMethod" name="paymentMethod" required>
+            <option value="Credit Card">Кредитна картка</option>
+            <option value="Cash">Готівка</option>
+        </select>
+        <button type="button" id="submitOrder">Створити замовлення</button>
+    </form>
+
+    <h2>Замовлення</h2>
+    <table id="ordersTable">
+        <thead>
+            <tr>
+                <th>ID Замовлення</th>
+                <th>ID Клієнта</th>
+                <th>ID продукту</th>
+                <th>Кількість</th>
+                <th>Сума</th>
+                <th>Оплата</th>
+                <th>ID Працівника</th>
+            </tr>
+        </thead>
+        <tbody id="ordersContainer"></tbody>
+    </table>
+<script src = "./scripts/about.js"></script>
+</body>
+</html>

@@ -1,0 +1,214 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-left: 10%;
+}
+.product-item {
+  background-color: lightgray;
+  padding: 20px;
+  border-radius: 8px;
+  border: 2px solid black;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 250px;
+}
+.product-item h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+.product-item p {
+  font-size: 1rem;
+  margin: 5px 0;
+}
+.form-label {
+  margin-bottom: 10px;
+}
+.form-input {
+  width: 100%;
+  padding: 8px;
+  margin: 5px 0;
+}
+.form-button {
+  padding: 10px 20px;
+  margin-left: 45%;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+}
+.form-toggle-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #2196F3;
+  color: white;
+  border: none;
+  border-radius: 4px;
+}
+.search-form {
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.search-input {
+  padding: 8px;
+  font-size: 1rem;
+  width: 250px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+.search-button {
+  padding: 8px 16px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.page-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 20px;
+}
+button#confirm-edit, button#confirm-price, button#confirm-info, button#confirm-discount {
+  background-color: #007BFF;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+button#confirm-edit:hover, button#confirm-price:hover, button#confirm-info:hover, button#confirm-discount:hover {
+  background-color: #0056b3;
+}
+button#confirm-edit:focus, button#confirm-price:focus, button#confirm-info:focus, button#confirm-discount:focus {
+  outline: none;
+}
+#sortPriceButton {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+#sortPriceButton:hover {
+    background-color: #45a049;
+}
+#sortPriceButton:active {
+    transform: scale(0.98);
+}
+#sortPriceButton:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+.product-form {
+  display: flex;
+  align-items: center;
+  width: 50%;
+  margin-left: 25%;
+}
+#edit-form-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    background-color: white;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    max-width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#edit-form-container button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+#edit-form-container button:hover {
+    background-color: #0056b3;
+}
+#edit-form-container input,
+#edit-form-container textarea,
+#edit-form-container select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+#edit-form-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    display: none;
+}
+#text-field-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    background-color: white;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    max-width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#text-field-container input,
+#text-field-container textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+#text-field-container button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+}
+#text-field-container button:hover {
+    background-color: #0056b3;
+}

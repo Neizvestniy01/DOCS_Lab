@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Brew & Bloom</title>
+    <link rel="stylesheet" href="./styles/navbar.css" />
+    <link rel="stylesheet" href="./styles/albums.css"/>
+  </head>
+  <body>
+    <nav class="navbar">
+      <ul class="navbar-list">
+        <li class="navbar-item">
+          <a href="./index.html" class="navbar-link">Головна</a>
+        </li>
+        <li class="navbar-item">
+          <a href="./about.html" class="navbar-link">Замовлення</a>
+        </li>
+        <li class="navbar-item">
+          <a href="./history.html" class="navbar-link">Клієнти</a>
+        </li>
+        <li class="navbar-item">
+          <a href="./employees.html" class="navbar-link">Працівники</a>
+        </li>
+        <li class="navbar-item">
+          <a href="./albumPage.html" class="navbar-link">Постачальники</a>
+        </li>
+        <li class="navbar-item">
+          <a href="./auth.html" class="navbar-link">Вийти</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="home-page">
+      <h1 class="page-title">Товари</h1>
+      <div id="loading-message" class="loading-message"></div>
+      <div id="error-message" class="error-message"></div>
+      <div id="edit-form-overlay"></div>
+      <div id="edit-form-container" style="display: none;"></div>
+      <div class="search-form">
+          <button id="sortPriceButton">Сортувати за ціною</button>
+          <input type="text" id="search-input" class="search-input" placeholder="Пошук по назві товару"/>
+          <button id="search-button" class="search-button">Ок</button>
+      </div>
+      <div id="product-list" class="product-list"></div>
+
+      <button id="form-toggle-button" class="form-toggle-button">Додати новий товар</button>
+      <form id="product-form" class="product-form" style="display: none">
+        <h2 class="form-title">Додати новий товар</h2>
+        <label class="form-label">
+          Назва:
+          <input type="text" id="productName" class="form-input" required />
+        </label>
+        <label class="form-label">
+          Категорія:
+          <input type="text" id="category" class="form-input" required />
+        </label>
+        <label class="form-label">
+          Ціна:
+          <input type="number" id="price" class="form-input" required />
+        </label>
+        <label class="form-label">
+          Опис:
+          <textarea id="info" class="form-input" required></textarea>
+        </label>
+        <label class="form-label">
+          Знижка:
+          <input type="number" id="discount" class="form-input" value="0" />
+        </label>
+        <label class="form-label">
+          Кількість:
+          <input type="number" id="quantity" class="form-input" required />
+        </label>
+        <label class="form-label">
+          ID постачальника:
+          <input type="number" id="id_Supplier" class="form-input" required />
+        </label>
+        <button type="submit" class="form-button">Додати товар</button>
+      </form>
+    </div>
+    <script src="./scripts/albums.js"></script>
+  </body>
+</html>

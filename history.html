@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Brew & Bloom</title>
+    <link rel="stylesheet" href="./styles/history.css" />
+    <link rel="stylesheet" href="./styles/navbar.css" />
+</head>
+<body>
+    <nav class="navbar">
+      <ul class="navbar-list">
+        <li class="navbar-item">
+          <a href="./index.html" class="navbar-link">Головна</a>
+        </li>
+        <li class="navbar-item">
+          <a href="./about.html" class="navbar-link">Замовлення</a>
+        </li>
+        <li class="navbar-item">
+          <a href="./history.html" class="navbar-link">Клієнти</a>
+        </li>
+        <li class="navbar-item">
+          <a href="./employees.html" class="navbar-link">Працівники</a>
+        </li>
+        <li class="navbar-item">
+          <a href="./albumPage.html" class="navbar-link">Постачальники</a>
+        </li>
+        <li class="navbar-item">
+          <a href="./auth.html" class="navbar-link">Вийти</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="home-page">
+    <h1 class="page-title">Управління клієнтами</h1>
+    <div class="client-form">
+      <h2 class="form-title">Додати нового клієнта</h2>
+      <form id="add-user-form">
+        <label class="form-label" for="first-name">Ім'я:</label>
+        <input class="form-input" type="text" id="first-name" required>
+        <label class="form-label" for="last-name">Прізвище:</label>
+        <input class="form-input" type="text" id="last-name" required>
+        <label class="form-label" for="email">Електронна пошта:</label>
+        <input class="form-input" type="email" id="email" required>
+        <label class="form-label" for="phone-number">Телефон:</label>
+        <input class="form-input" type="text" id="phone-number" required>
+        <button type="submit" class="form-button">Додати клієнта</button>
+      </form>
+    </div>
+
+<div class="client-management">
+        <button id="sortAscBtn">Сортувати за алфавітом</button>
+        <button id="sortDescBtn">Сортувати проти алфавіту</button>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Ім'я</th>
+                    <th>Прізвище</th>
+                    <th>Імейл</th>
+                    <th>Номер</th>
+                    <th>Дії</th>
+                </tr>
+            </thead>
+            <tbody id="clientTable"></tbody>
+        </table>
+    </div>
+</div>
+<script src = "./scripts/history.js"></script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Brew & Bloom - Працівники</title>
+    <link rel="stylesheet" href="./styles/navbar.css"/>
+    <link rel="stylesheet" href="./styles/employees.css">
+</head>
+<body>
+<nav class="navbar">
+      <ul class="navbar-list">
+        <li class="navbar-item">
+          <a href="./index.html" class="navbar-link">Головна</a>
+        </li>
+        <li class="navbar-item">
+          <a href="./about.html" class="navbar-link">Замовлення</a>
+        </li>
+        <li class="navbar-item">
+          <a href="./history.html" class="navbar-link">Клієнти</a>
+        </li>
+        <li class="navbar-item">
+          <a href="./employees.html" class="navbar-link">Працівники</a>
+        </li>
+        <li class="navbar-item">
+          <a href="./albumPage.html" class="navbar-link">Постачальники</a>
+        </li>
+        <li class="navbar-item">
+          <a href="./auth.html" class="navbar-link">Вийти</a>
+        </li>
+      </ul>
+    </nav>
+
+<div class="employee-management">
+        <h2>Керування працівниками</h2>
+        <button id="sortAscBtn">Сортувати за алфавітом</button>
+        <button id="sortDescBtn">Сортувати проти алфавіту</button>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Ім'я</th>
+                    <th>Прізвище</th>
+                    <th>Посада</th>
+                    <th>Імейл</th>
+                    <th>Номер</th>
+                    <th>Дії</th>
+                </tr>
+            </thead>
+            <tbody id="employeeTable"></tbody>
+        </table>
+    </div>
+
+<div id="updateModal" class="modal">
+    <div class="modal-content">
+        <span class="close" id="closeModal">&times;</span>
+        <h3>Оновити дані працівника</h3>
+        <form id="updateForm">
+            <label for="updateField">Оберіть поле:</label>
+            <select id="updateField">
+                <option value="First_name">Ім'я</option>
+                <option value="Last_name">Прізвище</option>
+                <option value="Position">Посада</option>
+                <option value="Email">Імейл</option>
+                <option value="Phone_number">Номер телефону</option>
+            </select>
+            <br>
+            <label for="updateValue">Нове значення:</label>
+            <input type="text" id="updateValue" required />
+            <button type="submit">Зберегти</button>
+        </form>
+    </div>
+</div>
+<script src="./scripts/employees.js"></script>
+</body>
+</html>
